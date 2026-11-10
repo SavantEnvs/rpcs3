@@ -1,0 +1,9 @@
+project: savantenvs/rpcs3
+target: fuzz_self
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_self/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_self
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_self/fuzz_self.dict
