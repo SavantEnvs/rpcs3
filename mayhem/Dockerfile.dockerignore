@@ -1,0 +1,9 @@
+# Build context pruning: keep the repo and its .git history, drop local build output and editor noise.
+build/
+build-*/
+*.o
+*.a
+*.so
+.DS_Store
+*.swp
+*~

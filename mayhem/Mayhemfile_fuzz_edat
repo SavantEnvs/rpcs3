@@ -1,0 +1,9 @@
+project: savantenvs/rpcs3
+target: fuzz_edat
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_edat/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_edat
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_edat/fuzz_edat.dict
